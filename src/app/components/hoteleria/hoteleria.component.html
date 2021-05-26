@@ -1,0 +1,140 @@
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Crear administrador de hotel</p>
+        </div>
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="username" name="username" #username="ngModel" [(ngModel)]="admin.username" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="password" name="password" #password="ngModel" [(ngModel)]="admin.password" />
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="button" class="btnSubmit" (click)="crearAdminHotel()">Crear</button>
+
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Crear Hotel</p>
+        </div>
+
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nombre del Hotel" name="hotel" #hotel="ngModel" [(ngModel)]="hotelModel.nombre" />
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="direccion del hotel" name="direccion" #direccion="ngModel" [(ngModel)]="hotelModel.direccion" />
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-6">
+                    <select type="text" class="form-select" name="administrador" #administrador="ngModel" [(ngModel)]="hotelModel.administrador">
+                    <option selected=""></option>
+                <option *ngFor="let admin of admins" value="{{admin._id}}">{{admin.username}}</option>
+              </select>
+
+                </div>
+                <br>
+            </div>
+            <br>
+            <button type="button" class="btnSubmit" (click)="crearHotel()">Crear</button>
+
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Editar Hotel</p>
+        </div>
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select type="text" class="form-select" name="_id" #_id="ngModel" [(ngModel)]="editHotel._id">
+                          <option selected=""></option>
+                      <option *ngFor="let hotel of hoteles">{{hotel.nombre}}</option>
+                    </select>
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="nuevo nombre del hotel" name="nuevoN" #nuevoN="ngModel" [(ngModel)]="editHotel.nombre" />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Direccion" name="direccion2" #direccion2="ngModel" [(ngModel)]="editHotel.direccion" />
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <select type="text" class="form-select" name="administrador2" #administrador2="ngModel" [(ngModel)]="editHotel.administrador">
+                        <option selected=""></option>
+                    <option *ngFor="let admin of admins" value="{{admin._id}}">{{admin.username}}</option>
+                  </select>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <button type="button" class="btnSubmit" (click)="editarHotel()">Crear</button>
+
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Agregar una habitación a un hotel</p>
+        </div>
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select type="text" class="form-select" name="nombreHotel" #nombreHotel="ngModel" [(ngModel)]="habitacionModel.nombre">
+                        <option selected=""></option>
+                    <option *ngFor="let hotel of hoteles">{{hotel.nombre}}</option>
+                  </select>
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="nombre de la habitacion" name="habitacion" #habitacion="ngModel" [(ngModel)]="habitacionModel.nombreHabitacion" />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Precio" name="precio" #precio="ngModel" [(ngModel)]="habitacionModel.precio" />
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <button type="button" class="btnSubmit" (click)="agregarHabitacionesHotel()">Crear Habitacion</button>
+
+        </div>
+    </div>
+</div>
+<br><br>

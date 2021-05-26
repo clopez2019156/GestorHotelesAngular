@@ -1,0 +1,15 @@
+<div class="card" class="center" style="width: 18rem;" *ngFor="let hotel of _hotelesService.getHotel().eventos">
+    <div class="card-header">
+        Tipo de Evento: {{hotel.tipoEvento}}
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">fecha: {{hotel.fecha}}</li>
+        <li class="list-group-item">Hora: {{hotel.hora}}</li>
+    </ul>
+
+
+</div>
+<br>
+<div class="center" class="card" style="width: 15rem;">
+    <button class="center" type="button" class="btn btn-primary btn-lg" routerLink="/hotel" routerLinkActive="active">Regresar</button>
+</div>

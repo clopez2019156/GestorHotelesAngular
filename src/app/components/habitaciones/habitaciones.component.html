@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;" *ngFor="let hotel of _hotelesService.getHotel().habitaciones">
+    <div class="card-header" *ngIf="hotel.disponibilidad=='disponible'">
+        Habitacion: {{hotel.nombreHabitacion}}
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngIf="hotel.disponibilidad=='disponible'">Precio: {{hotel.precio}}</li>
+        <li class="list-group-item" *ngIf="hotel.disponibilidad=='disponible'">Disponibilidad: {{hotel.disponibilidad}}</li>
+    </ul>
+
+
+</div>
+<div class="card" style="width: 15rem;">
+    <button type="button" class="btn btn-primary btn-lg" routerLink="/hotel" routerLinkActive="active">Regresar</button>
+</div>

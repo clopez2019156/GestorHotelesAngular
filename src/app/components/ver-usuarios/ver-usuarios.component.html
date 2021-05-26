@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">username</th>
+            <th scope="col">rol</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usua of usuarios">
+            <th scope="row">{{ usua._id }}</th>
+            <td>{{ usua.username }}</td>
+            <td>{{ usua.rol }}</td>
+            <td>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>

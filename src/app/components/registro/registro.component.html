@@ -1,0 +1,23 @@
+<br><br><br><br><br><br><br><br>
+
+<body>
+    <div class="container">
+        <section id="content">
+            <form action="">
+                <h1>Registrarse</h1>
+                <div>
+                    <input type="text" placeholder="Username" required="" id="username" name=username #username="ngModel" [(ngModel)]="usuarioModel.username" />
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" required="" id="password" name="password" #password=ngModel [(ngModel)]="usuarioModel.password" />
+                </div>
+                <div>
+                    <input type="submit" value="Registrarse" (click)="registrarUsuario()" />
+
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+</body>

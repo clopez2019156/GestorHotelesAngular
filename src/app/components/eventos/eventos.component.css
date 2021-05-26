@@ -1,0 +1,15 @@
+.center {
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.card {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 30px;
+    /* Added */
+}

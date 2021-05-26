@@ -1,0 +1,25 @@
+<form>
+
+    <div class="mb-3" class="container">
+        <label for="inputHabitacion" class="form-label">Habitacion</label>
+        <select type="text" class="form-select" name="_id" #_id="ngModel" [(ngModel)]="reservacionModel.habitacion">
+          <option selected=""></option>
+      <option *ngFor="let hotel of habitaciones">{{hotel.nombreHabitacion}}</option>
+    </select>
+    </div>
+    <br>
+    <div class="row" class="col-5" class="container">
+        <label for="exampleInputEmail1" class="form-label">Fecha de entrada</label>
+        <input id="date" type="date" class="form-control" value="2021-01-01" name="fechaEntrada" #fechaEntrada="ngModel" [(ngModel)]="reservacionModel.fechaEntrada">
+    </div>
+    <br>
+    <div class="mb-3" class="container">
+        <label for="exampleInputPassword1" class="form-label">fecha de Salida</label>
+        <input id="date" type="date" class="form-control" value="2021-01-01" name="fechaSalida" #fechaSalida="ngModel" [(ngModel)]="reservacionModel.fechaSalida">
+    </div>
+    <br>
+
+    <div class="mb-3" class="container">
+        <button type="submit" class="btn btn-primary" (click)="hacerReservacion()">Reservar</button>
+    </div>
+</form>

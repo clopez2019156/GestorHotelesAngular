@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-sm-6" class="center">
+        <img class="center" src="../../../assets/images/barcelo.jpg" class="card-img-top" alt="imagen no disponible">
+        <div class="card text-center" *ngFor="let hotel of hoteles">
+            <div class="card-body">
+                <h5 class="card-title">{{hotel.nombre}}</h5>
+                <p class="card-text">{{hotel.direccion}}</p>
+                <a class="btn btn-primary" (click)="buscarHotelNombre(hotel.nombre)">Hospedarse</a>
+            </div>
+
+        </div>
+
+    </div>
