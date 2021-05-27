@@ -1,0 +1,33 @@
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Añadir cargo de servicio a una reservación</p>
+        </div>
+
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Costo del servicio" name="precio" #precio="ngModel" [(ngModel)]="servicioModel.precio" />
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="nombre del servicio" name="tipoServicio" #tipoServicio="ngModel" [(ngModel)]="servicioModel.tipoServicio" />
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-6">
+                    <select type="text" class="form-select" name="administrador" #administrador="ngModel" [(ngModel)]="servicioModel.reservacion">
+                  <option selected=""></option>
+              <option *ngFor="let admin of reservaciones" value="{{admin._id}}">{{admin.username}}</option>
+            </select>
+
+                </div>
+                <br>
+            </div>
+            <br>
+            <button type="button" class="btnSubmit" (click)="agregarServicio()">Crear</button>
+
+        </div>
+    </div>
+</div>
